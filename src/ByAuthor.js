@@ -5,7 +5,7 @@ export default function ByAuthor(props) {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    fetch(props.apiUrl + "byauthor")
+    fetch(props.apiUrl + "posts/byauthor")
       .then((response) => response.json())
       .then((response) => {
         setResults(response);
@@ -16,9 +16,9 @@ export default function ByAuthor(props) {
     <>
       <ul>
         {results.map((item) => (
-          <li key={item._id}>
-            <Link to={"/posts/author/" + item._id}>
-              {item._id + " (" + item.count + ")"}
+          <li key={item.id}>
+            <Link to={"/posts/author/" + item.id}>
+              {item.id + " (" + item.count + ")"}
             </Link>
           </li>
         ))}

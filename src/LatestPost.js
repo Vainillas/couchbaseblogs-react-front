@@ -19,12 +19,12 @@ export default function LatestPost(props) {
       </header>
       <div className="posts">
         {latest.map((post) => (
-          <article key={post._id.$oid}>
-            <h3>{post.title}</h3>
-            <p>{post.resume}</p>
+          <article key={post.id}>
+            <h3>{post?.title}</h3>
+            <p>{post?.resume}</p>
             <ul className="actions">
               <li>
-                <Link to={"posts/" + post._id.$oid}>Read more...</Link>
+                <Link to={"posts/" + post?.author}>Read more...</Link>
               </li>
             </ul>
           </article>

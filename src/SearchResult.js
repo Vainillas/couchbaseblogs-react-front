@@ -18,11 +18,11 @@ export default function SearchResult() {
         <tbody>
           {location.state.map((result, index) => (
             <tr key={index}>
-              <td>{result.author}</td>
-              <td>{result.title}</td>
-              <td>{result.resume}</td>
+              <td>{result?.author}</td>
+              <td>{result?.title}</td>
+              <td>{result?.resume}</td>
               <td>
-                <Link to={"/posts/" + result._id.$oid}>Read more...</Link>
+                <Link to={"/posts/" + result.author}>Read more...</Link>
               </td>
             </tr>
           ))}

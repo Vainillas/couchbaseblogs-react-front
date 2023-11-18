@@ -8,7 +8,7 @@ export default function SearchBox(props) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch(props.apiUrl + "search/" + textSearch)
+    fetch(props.apiUrl + "posts/search/" + textSearch)
       .then((response) => response.json())
       .then((response) => {
         navigate("/search/result", { state: response });

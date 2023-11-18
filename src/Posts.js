@@ -8,9 +8,9 @@ export default function Posts(props) {
   const { name } = useParams();
 
   useEffect(() => {
-    let uri = "posts/";
+    let uri = "posts/author/";
     if (postId) uri += postId;
-    if (name) uri += "author/" + name;
+    if (name) uri += name;
 
     fetch(props.apiUrl + uri)
       .then((response) => response.json())
@@ -22,26 +22,26 @@ export default function Posts(props) {
   return (
     <span key={name}>
       {posts.map((post) => (
-        <section key={post._id.$oid}>
+        <section key={post?.id}>
           <header className="main">
-            <h1>{post.title}</h1>
+            <h1>{post?.title}</h1>
           </header>
-          <h3>{post.resume}</h3>
-          <p>{post.text}</p>
+          <h3>{post?.resume}</h3>
+          <p>{post?.text}</p>
           <h4>Related Links</h4>
           <ul className="alt">
-            {post.relatedlinks.map((link, index) => (
+            {post?.relatedlinks?.map((link, index) => (
               <li key={index}>{link}</li>
             ))}
           </ul>
           <h4>Tags</h4>
           <ul>
-            {post.tags.map((tag, index) => (
+            {post?.tags?.map((tag, index) => (
               <li key={index}>{tag}</li>
             ))}
           </ul>
           <h4>Author</h4>
-          <p>{post.author}</p>
+          <p>{post?.author}</p>
         </section>
       ))}
       <p>
