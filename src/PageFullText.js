@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
 export default function PageFullText(props) {
+  const pages = Array.isArray(props.page) ? props.page : [props.page];
   return (
     <>
-      {props.page.map((page) => (
-        <section key={page._id.$oid}>
+      {pages.map((page) => (
+        <section key={page._id}>
           <header className="main">
             <h1>{page.title}</h1>
 

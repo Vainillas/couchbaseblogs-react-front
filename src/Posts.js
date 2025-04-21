@@ -30,7 +30,7 @@ export default function Posts(props) {
           <p>{post?.text}</p>
           <h4>Related Links</h4>
           <ul className="alt">
-            {post?.relatedlinks?.map((link, index) => (
+            {post?.relatedLinks?.map((link, index) => (
               <li key={index}>{link}</li>
             ))}
           </ul>

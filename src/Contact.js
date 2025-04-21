@@ -6,7 +6,7 @@ export default function Contact() {
       </header>
       <ul className="contact">
         <li className="fa-envelope-o">
-          <a href="#">enrique.molinari@gmail.com</a>
+          <a href="#">maliberti@unrn.edu.ar</a>
         </li>
       </ul>
     </section>
