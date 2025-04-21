@@ -1,8 +1,6 @@
 # React Blog
 
-React Blog is a single page application built with React as part of my book [Understanding React](https://leanpub.com/understandingreact). Too see it running, it requires to start the fake API application project [blog-api](https://github.com/enriquemolinari/blog-api).
-
-The book is completely **free** for my students (if you want to read it, just write to me).
+React Blog es una aplicación web simple que permite navegar por los posts y las páginas del blog definido para el final de la materia Base de Datos 2 de la Licenciatura en Sistemas de la Universidad Nacional de Río Negro. Está diseñada para funcionar sobre el [backend](https://github.com/Vainillas/couchbaseblogs) implementado con couchbase y spring boot. 
 
 # Install and Start
 
