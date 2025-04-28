@@ -22,7 +22,7 @@ export default function SearchResult() {
               <td>{result?.title}</td>
               <td>{result?.resume}</td>
               <td>
-                <Link to={"/posts/" + result.author}>Read more...</Link>
+                <Link to={"/posts/" + result.id}>Read more...</Link>
               </td>
             </tr>
           ))}
