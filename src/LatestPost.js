@@ -24,7 +24,7 @@ export default function LatestPost(props) {
             <p>{post?.resume}</p>
             <ul className="actions">
               <li>
-                <Link to={"posts/" + post?.author}>Read more...</Link>
+                <Link to={"posts/" + post?.id}>Read more...</Link>
               </li>
             </ul>
           </article>

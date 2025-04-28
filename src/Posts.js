@@ -8,14 +8,15 @@ export default function Posts(props) {
   const { name } = useParams();
 
   useEffect(() => {
-    let uri = "posts/author/";
+    let uri = "posts/";
     if (postId) uri += postId;
-    if (name) uri += name;
+    if (name) uri +=  "author/" + name;
 
     fetch(props.apiUrl + uri)
       .then((response) => response.json())
       .then((response) => {
-        setPosts(response);
+          setPosts(Array.isArray(response) ? response : [response]);
+        console.log(response);
       });
   }, [postId, name]);
 
