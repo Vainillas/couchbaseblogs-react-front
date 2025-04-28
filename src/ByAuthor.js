@@ -16,9 +16,9 @@ export default function ByAuthor(props) {
     <>
       <ul>
         {results.map((item) => (
-          <li key={item.id}>
-            <Link to={"/posts/author/" + item.id}>
-              {item.id + " (" + item.count + ")"}
+          <li key={item.author}>
+            <Link to={"/posts/author/" + item.author}>
+              {item.author + " (" + item.count + ")"}
             </Link>
           </li>
         ))}
